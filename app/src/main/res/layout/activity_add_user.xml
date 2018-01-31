@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.salman.myproject.ui.AddUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradinet">
+
+        <TextView
+            android:id="@+id/add_user_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/audiowide"
+            android:text="Add Student"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText"
+            tools:targetApi="jelly_bean"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/add_user_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/circle"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            app:srcCompat="@drawable/ic_camera"
+            tools:ignore="ContentDescription"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/add_user_profile_pic"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_alignTop="@+id/imageView"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/name_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_user_profile_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="15dp"
+            android:theme="@style/TextInputTheme">
+
+            <EditText
+                android:id="@+id/add_user_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/add_id_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_text_input"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:theme="@style/TextInputTheme">
+
+            <EditText
+                android:id="@+id/add_id_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID/Roll Number"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/add_user_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/add_id_text_input_layout"
+            android:layout_alignLeft="@+id/add_id_text_input_layout"
+            android:layout_alignRight="@+id/add_id_text_input_layout"
+            android:layout_alignStart="@+id/add_id_text_input_layout"
+            android:layout_below="@+id/add_id_text_input_layout"
+            android:layout_marginTop="46dp"
+            android:text="Add User"
+            android:backgroundTint="@color/white"
+            android:padding="20dp"
+            tools:ignore="HardcodedText"
+            tools:targetApi="lollipop"/>
+
+    </RelativeLayout>
+
+</layout>

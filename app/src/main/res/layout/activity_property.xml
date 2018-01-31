@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.salman.myproject.ui.PropertyActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/property_drawer_layout"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:animateLayoutChanges="true"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_property"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Property"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/property_recycler_view"
+                android:layout_marginTop="55dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/property_card_recycler_layout"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/add_property_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="35dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:elevation="10dp"
+                app:fabSize="normal"
+                app:rippleColor="@color/rippleColor"
+                app:srcCompat="@drawable/ic_add"
+                tools:targetApi="lollipop"/>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/property_nav"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/property_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="start"/>
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>

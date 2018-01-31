@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.salman.myproject.ui.AttendanceActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/attendance_summary_toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Attendance Summary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <TextView
+        android:id="@+id/summary_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name, Id or Roll Number    "
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:padding="3dp"
+        android:layout_below="@+id/attendance_summary_toolbar"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/attendance_summary_toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/summary_name"
+        android:layout_toRightOf="@+id/summary_name"
+        android:background="#333"
+        android:padding="10dp"
+        android:id="@+id/view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attendance_summary_toolbar"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_toEndOf="@+id/view"
+        android:layout_toRightOf="@+id/view"
+        android:text="P"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        android:id="@+id/textView2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="A"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        android:id="@+id/textView3"/>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attendance_summary_toolbar"
+        android:layout_marginLeft="54dp"
+        android:layout_marginStart="54dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="L"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"/>
+
+    <ScrollView
+        android:layout_below="@+id/summary_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/summary_recycler_view"
+            tools:listitem="@layout/attendance_recycler_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
